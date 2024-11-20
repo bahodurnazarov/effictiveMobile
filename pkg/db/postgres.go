@@ -6,7 +6,6 @@ import (
 	"github.com/bahodurnazarov/effictiveMobile/pkg/models"
 	logger "github.com/bahodurnazarov/effictiveMobile/pkg/utils"
 	"gorm.io/driver/postgres"
-
 	"gorm.io/gorm"
 )
 
@@ -39,4 +38,14 @@ func postgresDB(cfg *models.Settings) (*gorm.DB, error) {
 
 	logger.InfoLogger.Println("*** POSTGRES *** -> success connect to Database by user")
 	return DB, nil
+}
+
+func CloseDB() error {
+	sqlDB, err := DB.DB()
+	if err != nil {
+		logger.DebugLogger.Println(err.Error())
+		return err
+	}
+	// Close
+	return sqlDB.Close()
 }

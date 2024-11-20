@@ -3,6 +3,7 @@ package models
 type Settings struct {
 	App struct {
 		ServerName string `mapstructure:"APP_SERVERNAME"`
+		AppHost    string `mapstructure:"APP_HOST"`
 		PortRun    string `mapstructure:"APP_PORTRUN"`
 		DebugFile  string `mapstructure:"APP_DEBUGFILE"`
 		InfoFile   string `mapstructure:"APP_INFOFILE"`

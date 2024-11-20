@@ -12,3 +12,9 @@ INFO: 2024/11/20 20:26:34 &{0x14000146750 <nil> 0 0x1400021a380 1}
 INFO: 2024/11/20 20:26:45 This is an info message.
 INFO: 2024/11/20 20:26:45 *** POSTGRES *** -> success connect to Database by user
 INFO: 2024/11/20 20:26:45 &{0x1400013e750 <nil> 0 0x14000212380 1}
+INFO: 2024/11/20 20:56:58 *** POSTGRES *** -> success connect to Database by user
+INFO: 2024/11/20 20:57:22 *** POSTGRES *** -> success connect to Database by user
+INFO: 2024/11/20 20:57:45 *** POSTGRES *** -> success connect to Database by user
+INFO: 2024/11/20 20:59:31 *** POSTGRES *** -> success connect to Database by user
+INFO: 2024/11/20 20:59:54 *** POSTGRES *** -> success connect to Database by user
+INFO: 2024/11/20 21:02:13 *** POSTGRES *** -> success connect to Database by user
