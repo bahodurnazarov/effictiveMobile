@@ -1,14 +1,15 @@
 package main
 
 import (
-	"github.com/bahodurnazarov/effictiveMobile/pkg/config"
+	"github.com/bahodurnazarov/effictiveMobile/internal/app"
+	"github.com/bahodurnazarov/effictiveMobile/pkg/utils"
 	"log"
 )
 
 func main() {
-	cfg, err := config.Init()
+	cfg, err := utils.Init()
 	if err != nil {
 		log.Fatalln("Failed init cfg", err.Error())
 	}
-	log.Println(cfg)
+	app.New(cfg)
 }
