@@ -39,3 +39,5 @@ curl -X PUT http://localhost:8081/api/song/1 \
 "deleted": false
 }'
 
+curl for get all songs:
+curl -X GET "http://localhost:8081/api/songs?page=2&limit=5" -H "accept: application/json"

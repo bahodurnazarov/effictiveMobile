@@ -37,6 +37,7 @@ func Init(h *handler.Handler) *gin.Engine {
 		api.GET("/song/:id", h.GetSongByID)
 		api.PUT("/song/:id", h.UpdateSong)
 		api.GET("/songs", h.GetAllSongs)
+		api.GET("/songs/filter", h.GetSongsWithFilter)
 	}
 
 	return r

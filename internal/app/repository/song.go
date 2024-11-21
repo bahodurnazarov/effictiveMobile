@@ -6,6 +6,7 @@ import (
 	logger "github.com/bahodurnazarov/effictiveMobile/pkg/utils"
 	"gorm.io/gorm"
 	"log"
+	"strings"
 	"time"
 )
 
@@ -83,6 +84,43 @@ func (r *Repository) GetAllSongs(limit int, offset int) ([]models.Song, error) {
 	if err := r.Conn.Where("deleted = ?", false).Limit(limit).Offset(offset).Find(&songs).Error; err != nil {
 		logger.DebugLogger.Println(err)
 		return nil, err
+	}
+
+	if len(songs) == 0 {
+		logger.InfoLogger.Println("No records found")
+		return []models.Song{}, errors.New("No records found")
+	}
+
+	return songs, nil
+}
+
+func (r *Repository) GetSongsWithFilter(filters models.RequestSong, limit int, offset int) ([]models.Song, error) {
+	var songs []models.Song
+	query := r.Conn.Where("deleted = ?", false)
+	if filters.Group != "" {
+		query = query.Where("LOWER(group_name) LIKE ?", "%"+strings.ToLower(filters.Group)+"%")
+	}
+	if filters.SongName != "" {
+		query = query.Where("LOWER(song_name) LIKE ?", "%"+strings.ToLower(filters.SongName)+"%")
+	}
+	if !filters.ReleaseDate.IsZero() {
+		query = query.Where("release_date = ?", filters.ReleaseDate)
+	}
+	if filters.SongText != "" {
+		query = query.Where("LOWER(song_text) LIKE ?", "%"+strings.ToLower(filters.SongText)+"%")
+	}
+	if filters.Link != "" {
+		query = query.Where("LOWER(link) LIKE ?", "%"+strings.ToLower(filters.Link)+"%")
+	}
+
+	if err := query.Limit(limit).Offset(offset).Find(&songs).Error; err != nil {
+		logger.DebugLogger.Println(err)
+		return nil, err
+	}
+
+	if len(songs) == 0 {
+		logger.InfoLogger.Println("No records found")
+		return []models.Song{}, errors.New("No records found")
 	}
 	return songs, nil
 }
