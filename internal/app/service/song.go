@@ -31,3 +31,7 @@ func (s *Service) GetSongByID(songID string) (models.Song, error) {
 func (s *Service) UpdateSong(songID string, newSong models.Song) (models.Song, error) {
 	return s.Repository.UpdateSong(songID, newSong)
 }
+
+func (s *Service) GetAllSongs(limit int, offset int) ([]models.Song, error) {
+	return s.Repository.GetAllSongs(limit, offset)
+}

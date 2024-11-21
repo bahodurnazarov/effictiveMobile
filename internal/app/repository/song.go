@@ -77,3 +77,12 @@ func (r *Repository) UpdateSong(songID string, newSong models.Song) (models.Song
 	}
 	return song, nil
 }
+
+func (r *Repository) GetAllSongs(limit int, offset int) ([]models.Song, error) {
+	var songs []models.Song
+	if err := r.Conn.Where("deleted = ?", false).Limit(limit).Offset(offset).Find(&songs).Error; err != nil {
+		logger.DebugLogger.Println(err)
+		return nil, err
+	}
+	return songs, nil
+}

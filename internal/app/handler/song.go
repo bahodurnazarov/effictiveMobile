@@ -6,6 +6,7 @@ import (
 	"github.com/gin-gonic/gin"
 	"log"
 	"net/http"
+	"strconv"
 )
 
 // CreateSong creates a new song
@@ -142,4 +143,44 @@ func (h *Handler) UpdateSong(c *gin.Context) {
 
 	logger.InfoLogger.Println(song)
 	c.JSON(http.StatusOK, gin.H{"status": "success", "message": song})
+}
+
+// GetAllSongs godoc
+// @Summary Get all songs with pagination
+// @Description Retrieves a list of songs with pagination support
+// @Tags Songs
+// @Accept json
+// @Produce json
+// @Param page query int false "Page number" default(1)
+// @Param limit query int false "Number of records per page" default(10)
+// @Success 200 {object} []models.Song
+// @Failure 400 {object} models.ErrorResponse
+// @Failure 500 {object} models.ErrorResponse
+// @Router /api/songs [get]
+func (h *Handler) GetAllSongs(c *gin.Context) {
+	page, err := strconv.Atoi(c.DefaultQuery("page", "1"))
+	if err != nil || page < 1 {
+		logger.DebugLogger.Println(err.Error())
+		c.JSON(http.StatusBadRequest, gin.H{"status": "fail", "error": "Invalid page number"})
+		return
+	}
+
+	limit, err := strconv.Atoi(c.DefaultQuery("limit", "20"))
+	if err != nil || limit < 1 {
+		logger.DebugLogger.Println(err.Error())
+		c.JSON(http.StatusBadRequest, gin.H{"status": "fail", "error": "Invalid limit"})
+		return
+	}
+	logger.InfoLogger.Println("page %s and limit %s", page, limit)
+	offset := (page - 1) * limit
+
+	songs, err := h.Service.GetAllSongs(limit, offset)
+	if err != nil {
+		c.JSON(http.StatusInternalServerError, gin.H{"status": "error", "error": "Failed to fetch songs"})
+		return
+	}
+
+	logger.InfoLogger.Println("songs :", songs)
+	c.JSON(http.StatusOK, gin.H{"status": "success", "data": songs})
+
 }
