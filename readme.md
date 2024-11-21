@@ -1,15 +1,21 @@
-before start app please set the APP_ENV by running this command:
+# Music API Service
 
-// for running test environment
-# export APP_ENV=test 
+## Установка окружения
 
-// for running prod environment
-# export APP_ENV=prod 
+- Тестовая среда:
+  export APP_ENV=test
 
-for running server
-# go run cmd/app/main.go
+- Продакшен среда:
+  export APP_ENV=prod
 
-curl for creating song:
+## Запуск приложения
+
+- go run cmd/app/main.go
+
+
+## Эндпоинты и cURL
+
+### Создать песню
 curl -X POST http://localhost:8081/api/song \
 -H "Content-Type: application/json" \
 -d '{
@@ -21,13 +27,13 @@ curl -X POST http://localhost:8081/api/song \
 }'
 
 
-curl for soft deleting:
+### Удалить песню
 curl -X DELETE http://localhost:8081/api/song/1
 
-curl for get song by ID:
+### Получить песню по ID
 curl -X GET "http://localhost:8081/api/song/1" -H "Accept: application/json"
 
-curl for updating song
+### Обновить песню
 curl -X PUT http://localhost:8081/api/song/1 \
 -H "Content-Type: application/json" \
 -d '{
@@ -39,5 +45,19 @@ curl -X PUT http://localhost:8081/api/song/1 \
 "deleted": false
 }'
 
-curl for get all songs:
+
+### Получить все песни
 curl -X GET "http://localhost:8081/api/songs?page=2&limit=5" -H "accept: application/json"
+
+
+### Фильтр песен
+curl -X 'GET'
+'http://localhost:8081/api/songs/filter'
+-H 'accept: application/json'
+
+### Фильтры:
+- `group_name` — Фильтр по имени группы
+- `song_name` — Фильтр по названию песни
+- `release_date` — Фильтр по дате (формат: YYYY-MM-DD)
+- `song_text` — Фильтр по тексту песни
+- `link` — Фильтр по ссылке
