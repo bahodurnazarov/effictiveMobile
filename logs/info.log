@@ -1,20 +1,14 @@
-INFO: 2024/11/20 20:05:17 This is an info message.
-INFO: 2024/11/20 20:13:30 This is an info message.
-INFO: 2024/11/20 20:16:50 This is an info message.
-INFO: 2024/11/20 20:18:32 This is an info message.
-INFO: 2024/11/20 20:20:04 This is an info message.
-INFO: 2024/11/20 20:20:04 &{0x1400013e750 <nil> 0 0x14000003dc0 1}
-INFO: 2024/11/20 20:26:14 This is an info message.
-INFO: 2024/11/20 20:26:14 &{0x14000114750 <nil> 0 0x140000ad180 1}
-INFO: 2024/11/20 20:26:34 This is an info message.
-INFO: 2024/11/20 20:26:34 *** POSTGRES *** -> success connect to Database by user
-INFO: 2024/11/20 20:26:34 &{0x14000146750 <nil> 0 0x1400021a380 1}
-INFO: 2024/11/20 20:26:45 This is an info message.
-INFO: 2024/11/20 20:26:45 *** POSTGRES *** -> success connect to Database by user
-INFO: 2024/11/20 20:26:45 &{0x1400013e750 <nil> 0 0x14000212380 1}
-INFO: 2024/11/20 20:56:58 *** POSTGRES *** -> success connect to Database by user
-INFO: 2024/11/20 20:57:22 *** POSTGRES *** -> success connect to Database by user
-INFO: 2024/11/20 20:57:45 *** POSTGRES *** -> success connect to Database by user
-INFO: 2024/11/20 20:59:31 *** POSTGRES *** -> success connect to Database by user
-INFO: 2024/11/20 20:59:54 *** POSTGRES *** -> success connect to Database by user
-INFO: 2024/11/20 21:02:13 *** POSTGRES *** -> success connect to Database by user
+INFO: 2024/11/20 21:52:50 *** POSTGRES *** -> success connect to Database by user
+INFO: 2024/11/20 21:52:53 {0 Muse Supermassive Black Hole   false 0001-01-01 00:00:00 +0000 UTC 0001-01-01 00:00:00 +0000 UTC <nil>}
+INFO: 2024/11/20 21:55:01 *** POSTGRES *** -> success connect to Database by user
+INFO: 2024/11/20 21:55:08 {0 Muse Supermassive Black Hole   false 0001-01-01 00:00:00 +0000 UTC 0001-01-01 00:00:00 +0000 UTC <nil>}
+INFO: 2024/11/20 21:55:32 *** POSTGRES *** -> success connect to Database by user
+INFO: 2024/11/20 21:55:35 {0 Muse Supermassive Black Hole   false 0001-01-01 00:00:00 +0000 UTC 0001-01-01 00:00:00 +0000 UTC <nil>}
+INFO: 2024/11/20 21:57:44 *** POSTGRES *** -> success connect to Database by user
+INFO: 2024/11/20 21:57:57 {0 Muse Supermassive Black Hole   false 0001-01-01 00:00:00 +0000 UTC 0001-01-01 00:00:00 +0000 UTC <nil>}
+INFO: 2024/11/20 21:58:55 *** POSTGRES *** -> success connect to Database by user
+INFO: 2024/11/20 21:58:58 {0 Muse Supermassive Black Hole  false 0001-01-01 00:00:00 +0000 UTC 0001-01-01 00:00:00 +0000 UTC <nil>}
+INFO: 2024/11/20 21:58:58 New Song Created Successfully
+INFO: 2024/11/21 09:16:54 *** POSTGRES *** -> success connect to Database by user
+INFO: 2024/11/21 09:16:58 {0 Muse Supermassive Black Hole  false 0001-01-01 00:00:00 +0000 UTC 0001-01-01 00:00:00 +0000 UTC <nil>}
+INFO: 2024/11/21 09:16:58 New Song Created Successfully

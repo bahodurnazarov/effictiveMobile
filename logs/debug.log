@@ -1,5 +1,12 @@
-DEBUG: 2024/11/20 20:05:17 app.go:20: This is a debug message.
-DEBUG: 2024/11/20 20:13:30 app.go:22: failed to connect to `host=address user=postgres database=testTask`: hostname resolving error (lookup address: no such host)
-DEBUG: 2024/11/20 20:16:50 app.go:22: failed to connect to `host=address user=postgres database=testTask`: hostname resolving error (lookup address: no such host)
-DEBUG: 2024/11/20 20:18:32 app.go:22: failed to connect to `host=localhost user=postgres database=testTask`: dial error (dial tcp 127.0.0.1:5433: connect: connection refused)
-DEBUG: 2024/11/20 20:26:14 postgres.go:40: *** POSTGRES *** -> success connect to Database by user
+DEBUG: 2024/11/20 21:52:53 song.go:11: ERROR: column "group" of relation "songs" does not exist (SQLSTATE 42703)
+DEBUG: 2024/11/20 21:52:53 song.go:17: ERROR: column "group" of relation "songs" does not exist (SQLSTATE 42703)
+DEBUG: 2024/11/20 21:52:53 song.go:22: ERROR: column "group" of relation "songs" does not exist (SQLSTATE 42703)
+DEBUG: 2024/11/20 21:55:08 song.go:11: ERROR: column "group" of relation "songs" does not exist (SQLSTATE 42703)
+DEBUG: 2024/11/20 21:55:08 song.go:17: ERROR: column "group" of relation "songs" does not exist (SQLSTATE 42703)
+DEBUG: 2024/11/20 21:55:08 song.go:22: ERROR: column "group" of relation "songs" does not exist (SQLSTATE 42703)
+DEBUG: 2024/11/20 21:55:35 song.go:11: ERROR: invalid input syntax for type date: "" (SQLSTATE 22007)
+DEBUG: 2024/11/20 21:55:35 song.go:17: ERROR: invalid input syntax for type date: "" (SQLSTATE 22007)
+DEBUG: 2024/11/20 21:55:35 song.go:22: ERROR: invalid input syntax for type date: "" (SQLSTATE 22007)
+DEBUG: 2024/11/20 21:57:57 song.go:11: ERROR: invalid input syntax for type date: "NULL" (SQLSTATE 22007)
+DEBUG: 2024/11/20 21:57:57 song.go:20: ERROR: invalid input syntax for type date: "NULL" (SQLSTATE 22007)
+DEBUG: 2024/11/20 21:57:57 song.go:22: ERROR: invalid input syntax for type date: "NULL" (SQLSTATE 22007)

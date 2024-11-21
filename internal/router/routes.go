@@ -25,6 +25,11 @@ func Init(h *handler.Handler) *gin.Engine {
 			"message": "route not found!"})
 	})
 
+	api := r.Group("/api")
+	{
+		api.POST("/song", h.CreateSong)
+	}
+
 	return r
 }
 

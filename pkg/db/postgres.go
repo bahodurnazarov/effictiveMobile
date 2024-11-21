@@ -30,7 +30,7 @@ func postgresDB(cfg *models.Settings) (*gorm.DB, error) {
 		logger.DebugLogger.Println(err)
 		return nil, err
 	}
-	if err = db.AutoMigrate(); err != nil {
+	if err = db.AutoMigrate(models.Song{}); err != nil {
 		logger.DebugLogger.Println(err.Error())
 		return nil, err
 	}
