@@ -28,6 +28,7 @@ func Init(h *handler.Handler) *gin.Engine {
 	api := r.Group("/api")
 	{
 		api.POST("/song", h.CreateSong)
+		api.DELETE("/song/:id", h.DeleteSong)
 	}
 
 	return r

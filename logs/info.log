@@ -12,3 +12,6 @@ INFO: 2024/11/20 21:58:58 New Song Created Successfully
 INFO: 2024/11/21 09:16:54 *** POSTGRES *** -> success connect to Database by user
 INFO: 2024/11/21 09:16:58 {0 Muse Supermassive Black Hole  false 0001-01-01 00:00:00 +0000 UTC 0001-01-01 00:00:00 +0000 UTC <nil>}
 INFO: 2024/11/21 09:16:58 New Song Created Successfully
+INFO: 2024/11/21 18:46:32 *** POSTGRES *** -> success connect to Database by user
+INFO: 2024/11/21 18:46:38 id 1
+INFO: 2024/11/21 18:46:38 song deleted successfully

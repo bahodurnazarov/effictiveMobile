@@ -19,3 +19,7 @@ func (s *Service) CreateSong(requestBody models.Song) (models.Song, error) {
 	}
 	return song, nil
 }
+
+func (s *Service) DeleteSong(songID string) error {
+	return s.Repository.DeleteSong(songID)
+}
