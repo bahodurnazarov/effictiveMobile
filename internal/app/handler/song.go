@@ -15,7 +15,7 @@ import (
 // @Tags Songs
 // @Accept json
 // @Produce json
-// @Param song body models.Song true "Song details"
+// @Param song body models.RequestSong true "Song details"
 // @Success 201 {object} models.Song "The created song object"
 // @Failure 400 {object} models.ErrorResponse
 // @Failure 404 {object} models.ErrorResponse
@@ -80,7 +80,7 @@ func (h *Handler) DeleteSong(c *gin.Context) {
 // @Accept json
 // @Produce json
 // @Param id path string true "Song ID"
-// @Success 200 {object} models.Song
+// @Success 200 {object} models.RequestSong
 // @Failure 400 {object} models.ErrorResponse
 // @Failure 404 {object} models.ErrorResponse
 // @Failure 500 {object} models.ErrorResponse
@@ -94,6 +94,46 @@ func (h *Handler) GetSongByID(c *gin.Context) {
 	}
 
 	song, err := h.Service.GetSongByID(songID)
+	if err != nil {
+		logger.DebugLogger.Println(err.Error())
+		c.JSON(http.StatusBadRequest, gin.H{"status": "fail", "error": err.Error()})
+		return
+	}
+
+	logger.InfoLogger.Println(song)
+	c.JSON(http.StatusOK, gin.H{"status": "success", "message": song})
+}
+
+// UpdateSong godoc
+// @Summary Update an existing song
+// @Description Updates the details of a song by its ID
+// @Tags Songs
+// @Accept json
+// @Produce json
+// @Param id path string true "Song ID"
+// @Param song body models.RequestSong true "Updated song details"
+// @Success 200 {object} models.Song
+// @Failure 400 {object} models.ErrorResponse
+// @Failure 404 {object} models.ErrorResponse
+// @Failure 500 {object} models.ErrorResponse
+// @Router /api/song/{id} [put]
+func (h *Handler) UpdateSong(c *gin.Context) {
+	songID := c.Param("id")
+	log.Println("id", songID)
+	if songID == "" {
+		c.JSON(http.StatusBadRequest, gin.H{"status": "fail", "error": "song ID is required"})
+		return
+	}
+
+	var newSong models.Song
+	if err := c.ShouldBindJSON(&newSong); err != nil {
+		logger.DebugLogger.Println(err.Error())
+		c.JSON(http.StatusBadRequest, gin.H{"status": "fail", "error": err.Error()})
+		return
+	}
+	logger.InfoLogger.Println(newSong)
+
+	song, err := h.Service.UpdateSong(songID, newSong)
 	if err != nil {
 		logger.DebugLogger.Println(err.Error())
 		c.JSON(http.StatusBadRequest, gin.H{"status": "fail", "error": err.Error()})

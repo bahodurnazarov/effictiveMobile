@@ -27,3 +27,7 @@ func (s *Service) DeleteSong(songID string) error {
 func (s *Service) GetSongByID(songID string) (models.Song, error) {
 	return s.Repository.GetSongByID(songID)
 }
+
+func (s *Service) UpdateSong(songID string, newSong models.Song) (models.Song, error) {
+	return s.Repository.UpdateSong(songID, newSong)
+}

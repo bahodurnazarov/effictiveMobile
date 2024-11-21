@@ -6,6 +6,21 @@ definitions:
       status:
         type: string
     type: object
+  models.RequestSong:
+    properties:
+      deleted:
+        type: boolean
+      group_name:
+        type: string
+      link:
+        type: string
+      release_date:
+        type: string
+      song_name:
+        type: string
+      song_text:
+        type: string
+    type: object
   models.Song:
     properties:
       createdAt:
@@ -43,7 +58,7 @@ paths:
         name: song
         required: true
         schema:
-          $ref: '#/definitions/models.Song'
+          $ref: '#/definitions/models.RequestSong'
       produces:
       - application/json
       responses:
@@ -111,7 +126,7 @@ paths:
         "200":
           description: OK
           schema:
-            $ref: '#/definitions/models.Song'
+            $ref: '#/definitions/models.RequestSong'
         "400":
           description: Bad Request
           schema:
@@ -125,6 +140,44 @@ paths:
           schema:
             $ref: '#/definitions/models.ErrorResponse'
       summary: Get a song by ID
+      tags:
+      - Songs
+    put:
+      consumes:
+      - application/json
+      description: Updates the details of a song by its ID
+      parameters:
+      - description: Song ID
+        in: path
+        name: id
+        required: true
+        type: string
+      - description: Updated song details
+        in: body
+        name: song
+        required: true
+        schema:
+          $ref: '#/definitions/models.RequestSong'
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            $ref: '#/definitions/models.Song'
+        "400":
+          description: Bad Request
+          schema:
+            $ref: '#/definitions/models.ErrorResponse'
+        "404":
+          description: Not Found
+          schema:
+            $ref: '#/definitions/models.ErrorResponse'
+        "500":
+          description: Internal Server Error
+          schema:
+            $ref: '#/definitions/models.ErrorResponse'
+      summary: Update an existing song
       tags:
       - Songs
   /ping:

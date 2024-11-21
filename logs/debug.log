@@ -11,3 +11,12 @@ DEBUG: 2024/11/20 21:57:57 song.go:11: ERROR: invalid input syntax for type date
 DEBUG: 2024/11/20 21:57:57 song.go:20: ERROR: invalid input syntax for type date: "NULL" (SQLSTATE 22007)
 DEBUG: 2024/11/20 21:57:57 song.go:22: ERROR: invalid input syntax for type date: "NULL" (SQLSTATE 22007)
 DEBUG: 2024/11/21 19:25:30 song.go:25: parsing time "string" as "2006-01-02T15:04:05Z07:00": cannot parse "string" as "2006"
+DEBUG: 2024/11/21 21:10:33 song.go:41: record not found
+DEBUG: 2024/11/21 21:10:33 song.go:98: record not found
+DEBUG: 2024/11/21 21:33:47 song.go:130: parsing time "string" as "2006-01-02T15:04:05Z07:00": cannot parse "string" as "2006"
+DEBUG: 2024/11/21 21:34:34 song.go:130: parsing time "2006-01-02T15:04:05Z07:00": extra text: "07:00"
+DEBUG: 2024/11/21 21:34:36 song.go:130: parsing time "2006-01-02T15:04:05Z07:00": extra text: "07:00"
+DEBUG: 2024/11/21 21:34:58 song.go:130: parsing time "2006-01-02" as "2006-01-02T15:04:05Z07:00": cannot parse "" as "T"
+DEBUG: 2024/11/21 21:35:13 song.go:130: parsing time "2024-11-21 14:03:25.215249 +00:00" as "2006-01-02T15:04:05Z07:00": cannot parse " 14:03:25.215249 +00:00" as "T"
+DEBUG: 2024/11/21 21:35:31 song.go:130: parsing time "2024-11-21" as "2006-01-02T15:04:05Z07:00": cannot parse "" as "T"
+DEBUG: 2024/11/21 21:37:23 song.go:27: parsing time "string" as "2006-01-02T15:04:05Z07:00": cannot parse "string" as "2006"

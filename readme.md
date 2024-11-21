@@ -25,4 +25,17 @@ curl for soft deleting:
 curl -X DELETE http://localhost:8081/api/song/1
 
 curl for get song by ID:
-curl -X GET "http://localhost:8081/song/123" -H "Accept: application/json"
+curl -X GET "http://localhost:8081/api/song/1" -H "Accept: application/json"
+
+curl for updating song
+curl -X PUT http://localhost:8081/api/song/1 \
+-H "Content-Type: application/json" \
+-d '{
+"group_name": "Muse",
+"song_name": "Supermassive Black Hole",
+"release_date": "2006-07-16T00:00:00Z",
+"song_text": "Updated song text",
+"link": "https://www.youtube.com/watch?v=Xsp3_a-PMTw",
+"deleted": false
+}'
+
