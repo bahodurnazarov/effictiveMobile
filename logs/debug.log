@@ -10,3 +10,4 @@ DEBUG: 2024/11/20 21:55:35 song.go:22: ERROR: invalid input syntax for type date
 DEBUG: 2024/11/20 21:57:57 song.go:11: ERROR: invalid input syntax for type date: "NULL" (SQLSTATE 22007)
 DEBUG: 2024/11/20 21:57:57 song.go:20: ERROR: invalid input syntax for type date: "NULL" (SQLSTATE 22007)
 DEBUG: 2024/11/20 21:57:57 song.go:22: ERROR: invalid input syntax for type date: "NULL" (SQLSTATE 22007)
+DEBUG: 2024/11/21 19:25:30 song.go:25: parsing time "string" as "2006-01-02T15:04:05Z07:00": cannot parse "string" as "2006"

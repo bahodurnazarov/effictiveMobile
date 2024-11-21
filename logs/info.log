@@ -15,3 +15,55 @@ INFO: 2024/11/21 09:16:58 New Song Created Successfully
 INFO: 2024/11/21 18:46:32 *** POSTGRES *** -> success connect to Database by user
 INFO: 2024/11/21 18:46:38 id 1
 INFO: 2024/11/21 18:46:38 song deleted successfully
+INFO: 2024/11/21 19:03:14 *** POSTGRES *** -> success connect to Database by user
+INFO: 2024/11/21 19:03:25 {0 Muse Supermassive Black Hole 2006-07-16 00:00:00 +0000 UTC Ooh baby, don’t you know I suffer?
+Ooh baby, can you hear me moan?
+You caught me under false pretenses
+How long before you let me go?
+
+Ooh
+You set my soul alight
+Ooh
+You set my soul alight https://www.youtube.com/watch?v=Xsp3_a-PMTw false 0001-01-01 00:00:00 +0000 UTC 0001-01-01 00:00:00 +0000 UTC <nil>}
+INFO: 2024/11/21 19:03:25 New Song Created Successfully
+INFO: 2024/11/21 19:05:17 id 1
+INFO: 2024/11/21 19:05:17 song deleted successfully
+INFO: 2024/11/21 19:15:08 *** POSTGRES *** -> success connect to Database by user
+INFO: 2024/11/21 19:15:40 *** POSTGRES *** -> success connect to Database by user
+INFO: 2024/11/21 19:21:33 *** POSTGRES *** -> success connect to Database by user
+INFO: 2024/11/21 19:25:03 *** POSTGRES *** -> success connect to Database by user
+INFO: 2024/11/21 19:32:48 *** POSTGRES *** -> success connect to Database by user
+INFO: 2024/11/21 19:34:22 *** POSTGRES *** -> success connect to Database by user
+INFO: 2024/11/21 19:36:51 *** POSTGRES *** -> success connect to Database by user
+INFO: 2024/11/21 19:37:21 {1 Muse Supermassive Black Hole 2006-07-16 00:00:00 +0000 UTC Ooh baby, don’t you know I suffer?
+Ooh baby, can you hear me moan?
+You caught me under false pretenses
+How long before you let me go?
+
+Ooh
+You set my soul alight
+Ooh
+You set my soul alight https://www.youtube.com/watch?v=Xsp3_a-PMTw true 2024-11-21 19:03:25.215249 +0500 +05 2024-11-21 19:05:17.438368 +0500 +05 <nil>}
+INFO: 2024/11/21 19:37:49 *** POSTGRES *** -> success connect to Database by user
+INFO: 2024/11/21 20:03:13 *** POSTGRES *** -> success connect to Database by user
+INFO: 2024/11/21 20:03:39 {1 Muse Supermassive Black Hole 2006-07-16 00:00:00 +0000 UTC Ooh baby, don’t you know I suffer?
+Ooh baby, can you hear me moan?
+You caught me under false pretenses
+How long before you let me go?
+
+Ooh
+You set my soul alight
+Ooh
+You set my soul alight https://www.youtube.com/watch?v=Xsp3_a-PMTw true 2024-11-21 19:03:25.215249 +0500 +05 2024-11-21 19:05:17.438368 +0500 +05 <nil>}
+INFO: 2024/11/21 20:03:40 {1 Muse Supermassive Black Hole 2006-07-16 00:00:00 +0000 UTC Ooh baby, don’t you know I suffer?
+Ooh baby, can you hear me moan?
+You caught me under false pretenses
+How long before you let me go?
+
+Ooh
+You set my soul alight
+Ooh
+You set my soul alight https://www.youtube.com/watch?v=Xsp3_a-PMTw true 2024-11-21 19:03:25.215249 +0500 +05 2024-11-21 19:05:17.438368 +0500 +05 <nil>}
+INFO: 2024/11/21 20:08:42 *** POSTGRES *** -> success connect to Database by user
+INFO: 2024/11/21 20:11:41 *** POSTGRES *** -> success connect to Database by user
+INFO: 2024/11/21 20:12:59 *** POSTGRES *** -> success connect to Database by user

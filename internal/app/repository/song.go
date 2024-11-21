@@ -31,3 +31,12 @@ func (r *Repository) DeleteSong(songID string) error {
 	}
 	return nil
 }
+
+func (r *Repository) GetSongByID(songID string) (models.Song, error) {
+	var song models.Song
+	if err := r.Conn.First(&song, songID).Error; err != nil {
+		logger.DebugLogger.Println(err)
+		return models.Song{}, err
+	}
+	return song, nil
+}
